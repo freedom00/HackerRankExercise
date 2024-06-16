@@ -27,4 +27,9 @@ public class Solution {
         }
         return Arrays.asList(sumA, sumB);
     }
+
+    //4. A Very Big Sum
+    public static long aVeryBigSum(List<Long> ar) {
+        return ar.stream().mapToLong(i -> i).sum();
+    }
 }

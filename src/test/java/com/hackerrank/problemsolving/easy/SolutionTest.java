@@ -1,5 +1,6 @@
 package com.hackerrank.problemsolving.easy;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
@@ -9,19 +10,28 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class SolutionTest {
     @Test
+    @DisplayName("Solve Me First")
     public void solveMeFirst() {
         assertEquals(4, Solution.solveMeFirst(2, 2));
     }
 
     @Test
+    @DisplayName("Simple Array Sum")
     void simpleArraySum() {
         assertEquals(31, Solution.simpleArraySum(Arrays.asList(1, 2, 3, 4, 10, 11)));
     }
 
     @Test
+    @DisplayName("Compare the Triplets")
     void compareTriplets() {
         List<Integer> a = Arrays.asList(5, 6, 7);
         List<Integer> b = Arrays.asList(3, 6, 10);
         assertEquals(Arrays.asList(1, 1), Solution.compareTriplets(a, b));
+    }
+
+    @Test
+    @DisplayName("A Very Big Sum")
+    void aVeryBigSum() {
+        assertEquals(5000000015L, Solution.aVeryBigSum(Arrays.asList(1000000001L, 1000000002L, 1000000003L, 1000000004L, 1000000005L)));
     }
 }
