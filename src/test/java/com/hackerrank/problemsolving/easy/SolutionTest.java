@@ -34,4 +34,10 @@ public class SolutionTest {
     void aVeryBigSum() {
         assertEquals(5000000015L, Solution.aVeryBigSum(Arrays.asList(1000000001L, 1000000002L, 1000000003L, 1000000004L, 1000000005L)));
     }
+
+    @Test
+    @DisplayName("Diagonal Difference")
+    void diagonalDifference() {
+        assertEquals(2, Solution.diagonalDifference(Arrays.asList(Arrays.asList(1, 2, 3), Arrays.asList(4, 5, 6), Arrays.asList(9, 8, 9))));
+    }
 }

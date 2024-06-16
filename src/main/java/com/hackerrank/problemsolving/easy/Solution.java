@@ -32,4 +32,15 @@ public class Solution {
     public static long aVeryBigSum(List<Long> ar) {
         return ar.stream().mapToLong(i -> i).sum();
     }
+
+    //5. Diagonal Difference
+    public static int diagonalDifference(List<List<Integer>> arr) {
+        int sum1 = 0;
+        int sum2 = 0;
+        for (int i = 0; i < arr.size(); i++) {
+            sum1 += arr.get(i).get(i);
+            sum2 += arr.get(i).get(arr.get(i).size() - 1 - i);
+        }
+        return Math.abs(sum1 - sum2);
+    }
 }
