@@ -40,4 +40,10 @@ public class SolutionTest {
     void diagonalDifference() {
         assertEquals(2, Solution.diagonalDifference(Arrays.asList(Arrays.asList(1, 2, 3), Arrays.asList(4, 5, 6), Arrays.asList(9, 8, 9))));
     }
+
+    @Test
+    @DisplayName("Plus Minus")
+    void plusMinus() {
+        assertEquals(Arrays.asList("0.500000", "0.333333", "0.166667"), Solution.plusMinus(Arrays.asList(-4, 3, -9, 0, 4, 1)));
+    }
 }

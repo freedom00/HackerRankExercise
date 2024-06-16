@@ -43,4 +43,14 @@ public class Solution {
         }
         return Math.abs(sum1 - sum2);
     }
+
+    //6. Plus Minus
+    public static List<String> plusMinus(List<Integer> ar) {
+        long positive = ar.stream().filter(i -> i > 0).count();
+        long negative = ar.stream().filter(i -> i < 0).count();
+        long neutral = ar.stream().filter(i -> i == 0).count();
+//        DecimalFormat df = new DecimalFormat("0.000000");
+//        return Arrays.asList(df.format((double) positive / ar.size()), df.format((double) negative / ar.size()), df.format((double) neutral / ar.size()));
+        return Arrays.asList(String.format("%.6f", (double) positive / ar.size()), String.format("%.6f", (double) negative / ar.size()), String.format("%.6f", (double) neutral / ar.size()));
+    }
 }
