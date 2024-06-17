@@ -84,4 +84,9 @@ public class SolutionTest {
     void birthdayCakeCandles() {
         assertEquals(2, Solution.birthdayCakeCandles(Arrays.asList(3, 2, 1, 3)));
     }
+
+    @Test
+    void timeConversion() {
+        assertEquals("19:05:45", Solution.timeConversion("07:05:45PM"));
+    }
 }

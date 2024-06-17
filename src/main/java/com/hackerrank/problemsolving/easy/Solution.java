@@ -1,5 +1,7 @@
 package com.hackerrank.problemsolving.easy;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
@@ -79,5 +81,16 @@ public class Solution {
     //9. Birthday Cake Candles
     public static int birthdayCakeCandles(List<Integer> candles) {
         return Collections.frequency(candles, Collections.max(candles));
+    }
+
+    //10. Time Conversion
+    public static String timeConversion(String s) {
+        SimpleDateFormat parseFormat = new SimpleDateFormat("hh:mm:ssa");
+        SimpleDateFormat displayFormat = new SimpleDateFormat("HH:mm:ss");
+        try {
+            return displayFormat.format(parseFormat.parse(s));
+        } catch (ParseException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
