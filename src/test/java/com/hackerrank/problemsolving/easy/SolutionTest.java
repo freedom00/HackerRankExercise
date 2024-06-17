@@ -74,9 +74,9 @@ public class SolutionTest {
     @Test
     @DisplayName("Mini-Max Sum")
     void miniMaxSum() {
-        String expectedOut = "10 14\r\n";
+        String expectedOutput = "10 14\r\n";
         Solution.miniMaxSum(Arrays.asList(1, 2, 3, 4, 5));
-        assertEquals(expectedOut, outContent.toString());
+        assertEquals(expectedOutput, outContent.toString());
     }
 
     @Test
@@ -95,5 +95,13 @@ public class SolutionTest {
     @DisplayName("Grading Students")
     void gradingStudents() {
         assertEquals(Arrays.asList(75, 67, 40, 33), Solution.gradingStudents(Arrays.asList(73, 67, 38, 33)));
+    }
+
+    @Test
+    @DisplayName("Apple and Orange")
+    void countApplesAndOranges() {
+        String expectedOutput = "1\r\n2\r\n";
+        Solution.countApplesAndOranges(7, 10, 4, 12, Arrays.asList(2, 3, -4), Arrays.asList(3, -2, -4));
+        assertEquals(expectedOutput, outContent.toString());
     }
 }

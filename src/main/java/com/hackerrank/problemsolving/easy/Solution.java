@@ -110,4 +110,10 @@ public class Solution {
         }
         return grades;
     }
+
+    //12. Apple and Orange
+    public static void countApplesAndOranges(int s, int t, int a, int b, List<Integer> apples, List<Integer> oranges) {
+        System.out.println(apples.stream().filter(i -> a + i >= s && a + i <= t).count());
+        System.out.println(oranges.stream().filter(i -> b + i >= s && b + i <= t).count());
+    }
 }
