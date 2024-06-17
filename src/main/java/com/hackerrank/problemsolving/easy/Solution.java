@@ -93,4 +93,21 @@ public class Solution {
             throw new RuntimeException(e);
         }
     }
+
+    //11. Grading Students
+    public static List<Integer> gradingStudents(List<Integer> grades) {
+        for (int i = 0; i < grades.size(); i++) {
+            if (grades.get(i) < 38) {
+                continue;
+            }
+            int times = 0;
+            do {
+                times++;
+            } while ((grades.get(i) + times) % 5 != 0);
+            if (times < 3) {
+                grades.set(i, grades.get(i) + times);
+            }
+        }
+        return grades;
+    }
 }

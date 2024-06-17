@@ -86,7 +86,14 @@ public class SolutionTest {
     }
 
     @Test
+    @DisplayName("Time Conversion")
     void timeConversion() {
         assertEquals("19:05:45", Solution.timeConversion("07:05:45PM"));
+    }
+
+    @Test
+    @DisplayName("Grading Students")
+    void gradingStudents() {
+        assertEquals(Arrays.asList(75, 67, 40, 33), Solution.gradingStudents(Arrays.asList(73, 67, 38, 33)));
     }
 }
