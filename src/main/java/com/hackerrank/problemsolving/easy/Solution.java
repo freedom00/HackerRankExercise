@@ -75,4 +75,9 @@ public class Solution {
         long sum = arr.stream().mapToLong(i -> i).sum();
         System.out.println((sum - max) + " " + (sum - min));
     }
+
+    //9. Birthday Cake Candles
+    public static int birthdayCakeCandles(List<Integer> candles) {
+        return Collections.frequency(candles, Collections.max(candles));
+    }
 }

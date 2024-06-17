@@ -64,6 +64,7 @@ public class SolutionTest {
     }
 
     @Test
+    @DisplayName("Staircase")
     void staircase() {
         String expectedOutput = "     #\r\n    ##\r\n   ###\r\n  ####\r\n #####\r\n######\r\n";
         Solution.staircase(6);
@@ -71,9 +72,16 @@ public class SolutionTest {
     }
 
     @Test
+    @DisplayName("Mini-Max Sum")
     void miniMaxSum() {
         String expectedOut = "10 14\r\n";
         Solution.miniMaxSum(Arrays.asList(1, 2, 3, 4, 5));
         assertEquals(expectedOut, outContent.toString());
+    }
+
+    @Test
+    @DisplayName("Birthday Cake Candles")
+    void birthdayCakeCandles() {
+        assertEquals(2, Solution.birthdayCakeCandles(Arrays.asList(3, 2, 1, 3)));
     }
 }
