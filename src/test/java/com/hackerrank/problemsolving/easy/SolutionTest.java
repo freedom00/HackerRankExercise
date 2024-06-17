@@ -69,4 +69,11 @@ public class SolutionTest {
         Solution.staircase(6);
         assertEquals(expectedOutput, outContent.toString());
     }
+
+    @Test
+    void miniMaxSum() {
+        String expectedOut = "10 14\r\n";
+        Solution.miniMaxSum(Arrays.asList(1, 2, 3, 4, 5));
+        assertEquals(expectedOut, outContent.toString());
+    }
 }

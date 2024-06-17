@@ -1,6 +1,7 @@
 package com.hackerrank.problemsolving.easy;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class Solution {
@@ -65,5 +66,13 @@ public class Solution {
             }
             System.out.println();
         }
+    }
+
+    //8. Mini-Max Sum
+    public static void miniMaxSum(List<Integer> arr) {
+        int max = Collections.max(arr);
+        int min = Collections.min(arr);
+        long sum = arr.stream().mapToLong(i -> i).sum();
+        System.out.println((sum - max) + " " + (sum - min));
     }
 }
