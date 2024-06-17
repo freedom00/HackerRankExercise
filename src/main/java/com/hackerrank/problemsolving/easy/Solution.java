@@ -53,4 +53,17 @@ public class Solution {
 //        return Arrays.asList(df.format((double) positive / ar.size()), df.format((double) negative / ar.size()), df.format((double) neutral / ar.size()));
         return Arrays.asList(String.format("%.6f", (double) positive / ar.size()), String.format("%.6f", (double) negative / ar.size()), String.format("%.6f", (double) neutral / ar.size()));
     }
+
+    //7. Staircase
+    public static void staircase(int n) {
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n - 1 - i; j++) {
+                System.out.print(" ");
+            }
+            for (int j = n - 1 - i; j < n; j++) {
+                System.out.print("#");
+            }
+            System.out.println();
+        }
+    }
 }

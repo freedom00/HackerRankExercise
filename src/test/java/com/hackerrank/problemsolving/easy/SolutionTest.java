@@ -1,14 +1,30 @@
 package com.hackerrank.problemsolving.easy;
 
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
 import java.util.Arrays;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class SolutionTest {
+    private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+
+    @BeforeEach
+    void setUp() {
+        System.setOut(new PrintStream(outContent));
+    }
+
+    @AfterEach
+    void tearDown() {
+        System.setOut(System.out);
+    }
+
     @Test
     @DisplayName("Solve Me First")
     public void solveMeFirst() {
@@ -45,5 +61,12 @@ public class SolutionTest {
     @DisplayName("Plus Minus")
     void plusMinus() {
         assertEquals(Arrays.asList("0.500000", "0.333333", "0.166667"), Solution.plusMinus(Arrays.asList(-4, 3, -9, 0, 4, 1)));
+    }
+
+    @Test
+    void staircase() {
+        String expectedOutput = "     #\r\n    ##\r\n   ###\r\n  ####\r\n #####\r\n######\r\n";
+        Solution.staircase(6);
+        assertEquals(expectedOutput, outContent.toString());
     }
 }
