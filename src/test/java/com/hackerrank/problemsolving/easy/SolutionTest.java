@@ -104,4 +104,10 @@ public class SolutionTest {
         Solution.countApplesAndOranges(7, 10, 4, 12, Arrays.asList(2, 3, -4), Arrays.asList(3, -2, -4));
         assertEquals(expectedOutput, outContent.toString());
     }
+
+    @Test
+    @DisplayName("Number Line Jumps")
+    void kangaroo() {
+        assertEquals("YES", Solution.kangaroo(0, 3, 4, 2));
+    }
 }

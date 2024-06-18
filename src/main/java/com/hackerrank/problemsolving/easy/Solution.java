@@ -116,4 +116,14 @@ public class Solution {
         System.out.println(apples.stream().filter(i -> a + i >= s && a + i <= t).count());
         System.out.println(oranges.stream().filter(i -> b + i >= s && b + i <= t).count());
     }
+
+    //13. Number Line Jumps
+    public static String kangaroo(int x1, int v1, int x2, int v2) {
+        //x1 + v1 * step = x2 + v2 * step
+        //step = (x2 - x1) / (v1 - v2)
+        //step must be integer and > 0
+        //x2 - x1 > 0 && v1 - v2 > 0
+        //x2 already greater than x1 => v1 needs to > v2
+        return (v1 - v2) > 0 && (x2 - x1) % (v1 - v2) == 0 ? "YES" : "NO";
+    }
 }
