@@ -110,4 +110,10 @@ public class SolutionTest {
     void kangaroo() {
         assertEquals("YES", Solution.kangaroo(0, 3, 4, 2));
     }
+
+    @Test
+    @DisplayName("Between Two Sets")
+    void getTotalX() {
+        assertEquals(3, Solution.getTotalX(Arrays.asList(2, 4), Arrays.asList(16, 32, 96)));
+    }
 }

@@ -2,6 +2,7 @@ package com.hackerrank.problemsolving.easy;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
@@ -125,5 +126,33 @@ public class Solution {
         //x2 - x1 > 0 && v1 - v2 > 0
         //x2 already greater than x1 => v1 needs to > v2
         return (v1 - v2) > 0 && (x2 - x1) % (v1 - v2) == 0 ? "YES" : "NO";
+    }
+
+    //14. Between Two Sets
+    public static int getTotalX(List<Integer> a, List<Integer> b) {
+        int min = Collections.max(a);
+        int max = Collections.min(b);
+        List<Integer> divides = new ArrayList<>();
+        for (int i = min; i <= max; i++) {
+            boolean isDivided = true;
+            for (Integer x : a) {
+                if (i % x != 0) {
+                    isDivided = false;
+                    break;
+                }
+            }
+            if (isDivided) {
+                divides.add(i);
+            }
+        }
+        for (int i = 0; i < divides.size(); i++) {
+            for (Integer x : b) {
+                if (x % divides.get(i) != 0) {
+                    divides.remove(i--);
+                    break;
+                }
+            }
+        }
+        return divides.size();
     }
 }
